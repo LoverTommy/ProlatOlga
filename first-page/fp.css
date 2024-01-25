@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    height: 4000px;
+}
+
+.center {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Header */
+/*burger*/
+header .header .burger-menu {
+    display: none;
+}
+
+header .header .burger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@keyframes burger-animation-open {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+/*burger*/
+
+header {
+    box-shadow: 0px 2px 10px 0px rgba(86, 118, 206, 0.5);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+header .header a:last-child img {
+    width: 35px;
+    height: 35px;
+    vertical-align: bottom;
+}
+
+header .header a:last-child {
+    justify-self: center;
+    grid-column: 3;
+}
+
+header .header nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'IBM Plex Sans';
+    font-weight: 500;
+    font-size: 26px;
+    transition: 0.8s;
+}
+
+header .header nav ul li a:hover {
+    text-shadow: 3px 3px 3px rgb(172, 172, 172);
+    color: rgb(99, 70, 180);
+}
+
+header .header nav ul li {
+    list-style-type: none;
+}
+
+header .header nav {
+    grid-column: 2;
+    justify-self: center;
+}
+
+header .header nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+header .header {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    height: 50px;
+    align-items: center;
+}
+
+
+/* About-me */
+
+.contAbout {
+    padding-top: 70px;
+}
+
+
+.contAbout .about-me{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 430px;
+}
+
+.contAbout .about-me h4 {
+    font-family: 'IBM Plex Sans';
+    font-size: 60px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    max-width: max-content;
+    justify-self: center;
+    text-align: center;
+    text-shadow: 0px 3px 2px rgb(116, 116, 116);
+}
+
+.contAbout .about-me .about-me-info img {
+    width: 300px;
+    height: 400px;
+}
+
+.contAbout .about-me .about-me-info {
+    display: grid;
+    grid-template-columns: 300px 600px;
+    padding-top: 30px;
+    justify-self: center;
+    column-gap: 30px;
+}
+
+.contAbout .about-me .about-me-info p {
+    font-size: 30px;
+    font-family: 'manrope';
+    text-align: left;
+}
+
+.contAbout .about-me .about-me-info p a {
+    text-decoration: none;
+    color: rgb(141, 54, 141);
+}
+
+
+/* Production */
+
+.contProduct {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 80px 500px;
+    padding-top: 100px;
+}
+
+.contProduct hr {
+    width: 100%;
+    height: 1px;
+}
+
+.contProduct h4 {
+    font-family: 'IBM Plex Sans';
+    font-size: 60px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    max-width: max-content;
+    justify-self: center;
+    text-align: center;
+    text-shadow: 0px 3px 2px rgb(116, 116, 116);
+}
+
+.contProduct .production {
+    padding-top: 50px;
+    background: rgb(221, 226, 255);
+}
+
+.contProduct .production .product-swiper .swiper-elements .swiper-slide img {
+    height: 400px;
+    width: 320px;
+    object-fit: cover;
+    box-shadow: 2px 2px 5px;
+}
+
+.contProduct .production .product-swiper{
+    height: 98%;
+}   
+
+.contProduct .production .product-swiper .swiper-elements .swiper-slide:nth-child(12),
+.contProduct .production .product-swiper .swiper-elements .swiper-slide:nth-child(13),
+.contProduct .production .product-swiper .swiper-elements .swiper-slide:nth-child(14),
+.contProduct .production .product-swiper .swiper-elements .swiper-slide:nth-child(15) {
+    display: none;
+}
+
+
+/* Forum */
+
+.forum {
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr;
+}
+
+.forum h4 {
+    font-family: 'IBM Plex Sans';
+    font-size: 60px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    max-width: max-content;
+    text-shadow: 0px 3px 2px rgb(116, 116, 116);
+    padding-left: 20px;
+}
+
+.forum .forum-items {
+    display: flex;
+    flex-direction: column;
+    padding-left: 200px;
+    padding-top: 30px;
+    gap: 20px;
+}
+
+.forum .forum-items>div h5 {
+    font-family: 'manrope';
+    font-size: 22px;
+}
+
+.forum .forum-items>.open {
+    display: grid;
+    padding: 0 20px 0 20px;
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+    box-shadow: 2px 2px 9px;
+    align-items: center;
+}
+
+.forum .forum-items>.item1 {
+    grid-template-rows: 110px 0px;
+    overflow: hidden;
+}
+
+.forum .forum-items>.item1 .open-info p {
+    font-family: 'manrope';
+    font-size: 20px;
+}
+
+.forum .forum-items>.item1 .open-info ul li a{
+    text-decoration: none;
+    font-family: 'manrope';
+    font-size: 20px;
+    color: rgb(63, 69, 155);
+}
+
+.forum .forum-items>.item1 .open-info ul li img {
+    width: 25px;
+    padding-right: 10px;
+}
+
+.forum .forum-items>.item1 .open-info ul li {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.forum .forum-items>.item1 .open-info {
+    align-self: start;
+}
+
+
+
+.forum .forum-items>.item2 {
+    grid-template-rows: 110px 0px;
+    overflow: hidden;
+}
+
+.forum .forum-items>.item2 .open-info {
+    align-self: start;
+}
+
+.forum .forum-items>.item2 .open-info p {
+    font-family: 'manrope';
+    font-size: 20px;
+    width: 80%;
+}
+
+.forum .forum-items>.item2 .open-info p span {
+    color: rgb(79, 86, 184);
+}
+
+.forum .forum-items>.item2 .open-info p:last-child {
+    padding-top: 20px;
+}
+
+
+.forum .forum-items>.item3 {
+    grid-template-rows: 110px 0px;
+    overflow: hidden;
+}
+
+.forum .forum-items>.item3 .open-info p {
+    font-family: 'manrope';
+    font-size: 20px;
+    width: 90%;
+}
+
+.forum .forum-items>.item3 .open-info p span {
+    color: rgb(79, 86, 184);
+}
+
+.forum .forum-items>.item3 .open-info {
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.forum .forum-items>.item4 {
+    grid-template-rows: 110px 0px;
+    overflow: hidden;
+}
+
+.forum .forum-items>.item4 .open-info {
+    align-self: start;
+}
+
+.forum .forum-items>.item4 .open-info p {
+    font-family: 'manrope';
+    font-size: 20px;
+}
+
+.forum .forum-items>.item4 .open-info p:last-child {
+    padding-top: 20px;
+}
+
+.forum .forum-items>.item4 .open-info p:last-child a {
+    text-decoration: none;
+    color: rgb(79, 86, 184);
+}
+
+
+.forum .forum-items>.open .open-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.forum .forum-items>.open .open-title img {
+    cursor: pointer;
+    width: 30px;
+}
+
+
+.forum .forum-items>.openItem1 {
+    animation: openItem1; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+.forum .forum-items>.closeItem1 {
+    animation: closeItem1; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+.forum .forum-items>.item1 .open-title .openArrow1 {
+    animation: arrowRotate; 
+    animation-duration: 0.8s; 
+    animation-fill-mode: forwards;
+}
+
+.forum .forum-items>.item1 .open-title .closeArrow1 {
+    animation: arrowRotateToStart; 
+    animation-duration: 0.8s; 
+    animation-fill-mode: forwards;
+}
+
+
+
+.forum .forum-items>.openItem2 {
+    animation: openItem2; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+.forum .forum-items>.closeItem2 {
+    animation: closeItem2; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+.forum .forum-items>.item2 .open-title .openArrow2 {
+    animation: arrowRotate; 
+    animation-duration: 0.8s; 
+    animation-fill-mode: forwards;
+}
+
+.forum .forum-items>.item2 .open-title .closeArrow2 {
+    animation: arrowRotateToStart; 
+    animation-duration: 0.8s; 
+    animation-fill-mode: forwards;
+}
+
+
+
+.forum .forum-items>.openItem3 {
+    animation: openItem3; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+.forum .forum-items>.closeItem3 {
+    animation: closeItem3; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+.forum .forum-items>.item3 .open-title .openArrow3 {
+    animation: arrowRotate; 
+    animation-duration: 0.8s; 
+    animation-fill-mode: forwards;
+}
+
+.forum .forum-items>.item3 .open-title .closeArrow3 {
+    animation: arrowRotateToStart; 
+    animation-duration: 0.8s; 
+    animation-fill-mode: forwards;
+}
+
+
+
+
+.forum .forum-items>.openItem4 {
+    animation: openItem4; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+
+.forum .forum-items>.closeItem4 {
+    animation: closeItem4; 
+    animation-duration: 1s; 
+    animation-fill-mode: forwards;
+}
+.forum .forum-items>.item4 .open-title .openArrow4 {
+    animation: arrowRotate; 
+    animation-duration: 0.8s; 
+    animation-fill-mode: forwards;
+}
+
+.forum .forum-items>.item4 .open-title .closeArrow4 {
+    animation: arrowRotateToStart; 
+    animation-duration: 0.8s; 
+    animation-fill-mode: forwards;
+}
+
+@keyframes arrowRotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes arrowRotateToStart {
+    from {
+        transform: rotate(-90deg);
+    }
+    
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes openItem1 {
+    from {
+        grid-template-rows: 110px 0px;
+    }
+
+    to {
+        grid-template-rows: 110px 180px;
+    }
+}
+
+@keyframes closeItem1 {
+    from {
+        grid-template-rows: 110px 180px;
+    }
+    
+    to {
+        grid-template-rows: 110px 0px;
+    }
+}
+
+@keyframes openItem2 {
+    from {
+        grid-template-rows: 110px 0px;
+    }
+
+    to {
+        grid-template-rows: 110px 140px;
+    }
+}
+
+@keyframes closeItem2 {
+    from {
+        grid-template-rows: 110px 140px;
+    }
+    
+    to {
+        grid-template-rows: 110px 0px;
+    }
+}
+
+@keyframes openItem3 {
+    from {
+        grid-template-rows: 110px 0px;
+    }
+
+    to {
+        grid-template-rows: 110px 280px;
+    }
+}
+
+@keyframes closeItem3 {
+    from {
+        grid-template-rows: 110px 280px;
+    }
+    
+    to {
+        grid-template-rows: 110px 0px;
+    }
+}
+
+@keyframes openItem4 {
+    from {
+        grid-template-rows: 110px 0px;
+    }
+
+    to {
+        grid-template-rows: 110px 110px;
+    }
+}
+
+@keyframes closeItem4 {
+    from {
+        grid-template-rows: 110px 110px;
+    }
+    
+    to {
+        grid-template-rows: 110px 0px;
+    }
+}
+
